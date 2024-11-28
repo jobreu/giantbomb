@@ -1,7 +1,7 @@
 Package: giantbomb
 Type: Package
 Title: Access the GiantBomb API
-Version: 0.1.0
+Version: 0.2.0
 Author: Jonathan De Troye
 Maintainer: Jonathan De Troye <detroyejr@outlook.com>
 Description: Provides functions for accessing the GiantBomb api.
@@ -11,4 +11,5 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports:
   httr,
-  jsonlite
+  jsonlite,
+  dplyr
