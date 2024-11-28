@@ -1,0 +1,12 @@
+pkgdown:
+  as_is: true
+
+package:
+  name: "giantbomb"
+  title: "Access the GiantBomb API"
+  description: "Provides functions for accessing the GiantBomb API."
+
+reference:
+  - title: "Vignettes"
+    contents:
+      - "vignettes/giantbomb-vignette"

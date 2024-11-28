@@ -21,10 +21,10 @@ At the time this package was created, these endpoints are covered:
 -   `gb_platforms`
 -   `gb_franchises`
 
-API Key
+API key
 -------
 
-Before you can begin to use the giantbomb package, you will need to [sign up](https://www.giantbomb.com/signup/) to receive an api key. Once you login, your key will appead on the [main api page](https://www.giantbomb.com/api/).
+Before you can begin to use the giantbomb package, you will need to [sign up](https://www.giantbomb.com/signup/) to receive an API key. Once you login, your key will appead on the [main API page](https://www.giantbomb.com/api/).
 
 Once you have your key, you can either pass it as a string to the `api_key` function parameters or set the `GB_KEY` environoment variable.
 
@@ -37,7 +37,7 @@ The function `gb_key()` will look in the system environment for a variable with 
 Examples
 --------
 
-### Basic Usage
+### Basic usage
 
 ``` r
 # Get list of games.
@@ -69,7 +69,7 @@ gb_companies(n = 10, field_list = c("date_added", "name"))
 #> 10 2008-04-01 01:32:49     The Software Toolworks
 ```
 
-### Filters and Sorting
+### Filtering and sorting
 
 ``` r
 # Filter by name and sort by date_added.
@@ -103,7 +103,7 @@ gb_companies(
 #> 7 2013-01-10 03:33:57      2K Play
 ```
 
-For more examples, look in the function documentation.
+For more examples, please see the function documentation and package vignette.
 
 Contributing
 ------------

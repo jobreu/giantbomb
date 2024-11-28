@@ -2,9 +2,11 @@ Package: giantbomb
 Type: Package
 Title: Access the GiantBomb API
 Version: 0.2.0
-Author: Jonathan De Troye
-Maintainer: Jonathan De Troye <detroyejr@outlook.com>
-Description: Provides functions for accessing the GiantBomb api.
+Authors@R: c(
+    person("Jonathan", "De Troye", email = "detroyejr@outlook.com", role = c("cre", "aut)),
+    person("Johannes", "Breuer", email = "johannes.breuer@gesis.org", role = "ctb"))
+Maintainer: Jonathan De Troye <>
+Description: Provides functions for accessing the GiantBomb API.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -13,3 +15,4 @@ Imports:
   httr,
   jsonlite,
   dplyr
+  

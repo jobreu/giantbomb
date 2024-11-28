@@ -1,0 +1,131 @@
+---
+title: "Using the giantbomb Package"
+author: "Jonathan De Troye"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the giantbomb Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The `giantbomb` package provides access to the [GiantBomb API](https://www.giantbomb.com/api/) which gives information on video games, reviews, companies, and other related content.
+
+# Installation
+
+You can install the package from GitHub using the `devtools` package:
+
+```{r, eval=FALSE}
+devtools::install_github("detroyejr/giantbomb")
+```
+
+# API key
+
+Before you can begin to use the `giantbomb` package, you will need to [sign up](https://www.giantbomb.com/signup/) to receive an API key. Once you login, your key will appear on the [main API page](https://www.giantbomb.com/api/).
+
+Once you have your key, you can either pass it as a string to the `api_key` function parameters or set the `GB_KEY` environment variable.
+
+```{r, eval=FALSE}
+Sys.setenv("GB_KEY" = 'YOUR_API_KEY')
+```
+
+The function `gb_key()` will look in the system environment for a variable with that name.
+
+# Basic usage
+
+## Getting a list of games
+
+You can retrieve a list of games using the `gb_games` function. Here is an example:
+
+```{r}
+library(giantbomb)
+
+# Get list of games
+games <- gb_games(n = 10, field_list = c("date_added", "name"))
+print(games)
+```
+
+## Getting a list of companies
+
+You can retrieve a list of companies using the `gb_companies` function. Here is an example:
+
+```{r}
+# Get list of companies
+companies <- gb_companies(n = 10, field_list = c("date_added", "name"))
+print(companies)
+```
+
+# Filtering and sorting
+
+You can filter and sort the results using the `filter` and `sort` parameters. Here are some examples:
+
+## Filtering by name and sorting by date added
+
+```{r}
+# Filter by name and sort by date_added
+bioshock_games <- gb_games(
+  n = 10,
+  filter = "name:bioshock",
+  sort = "date_added:desc",
+  field_list = c("name", "date_added")
+)
+print(bioshock_games)
+```
+
+## Filtering companies by name and sorting by date added
+
+```{r}
+# Filter companies by name and sort by date_added
+companies_2k <- gb_companies(
+  n = 10,
+  filter = "name:2k",
+  sort = "date_added:asc",
+  field_list = c("name", "date_added")
+)
+print(companies_2k)
+```
+
+# Additional Examples
+
+## Getting a list of characters
+
+You can retrieve a list of characters using the `gb_characters` function. Here is an example:
+
+```{r}
+# Get list of characters
+characters <- gb_characters(n = 10, field_list = c("date_added", "name"))
+print(characters)
+```
+
+## Getting a list of reviews
+
+You can retrieve a list of reviews using the `gb_reviews` function. Here is an example:
+
+```{r}
+# Get list of reviews
+reviews <- gb_reviews(n = 10, field_list = c("date_added", "name"))
+print(reviews)
+```
+
+## Getting a list of platforms
+
+You can retrieve a list of platforms using the `gb_platforms` function. Here is an example:
+
+```{r}
+# Get list of platforms
+platforms <- gb_platforms(n = 10, field_list = c("date_added", "name"))
+print(platforms)
+```
+
+# Summary
+
+The `giantbomb` package provides a convenient way to access the GiantBomb API and retrieve information about video games, reviews, companies, and other related content. For more examples and detailed information, please refer to the function documentation.
