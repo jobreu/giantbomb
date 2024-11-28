@@ -5,10 +5,10 @@ The giantbomb package provides access to the [GiantBomb API](https://www.giantbo
 Install
 =======
 
-Install the package from *GitHub* using [`remotes`](https://remotes.r-lib.org/).
+Install the package using devtools.
 
 ``` r
-remotes::install_github("jobreu/giantbomb")
+devtools::install_github("detroyejr/giantbomb")
 ```
 
 At the time this package was created, these endpoints are covered:

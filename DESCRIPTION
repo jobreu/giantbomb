@@ -5,7 +5,6 @@ Version: 0.2.0
 Authors@R: c(
     person("Jonathan", "De Troye", email = "detroyejr@outlook.com", role = c("cre", "aut)),
     person("Johannes", "Breuer", email = "johannes.breuer@gesis.org", role = "ctb"))
-Maintainer: Jonathan De Troye <>
 Description: Provides functions for accessing the GiantBomb API.
 License: GPL-3
 Encoding: UTF-8
@@ -15,4 +14,10 @@ Imports:
   httr,
   jsonlite,
   dplyr
-  
+Depends:
+  R (>= 3.5.0)
+URL: https://github.com/detroyejr/giantbomb
+BugReports: https://github.com/detroyejr/giantbomb/issues
+Suggests:
+  pkgdown
+VignetteBuilder: knitr
